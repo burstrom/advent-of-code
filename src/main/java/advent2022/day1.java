@@ -1,25 +1,13 @@
 package advent2022;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class day1 {
 
 
-    public static void main(String[] args) throws FileNotFoundException {
-        Path path = Path.of("input1.txt").toAbsolutePath();
-        File input = path.toFile();
-
-        FileReader fr = new FileReader(input);
-        BufferedReader br = new BufferedReader(fr);
-        ArrayList<String> textInput = new ArrayList<>();
-
-        br.lines().forEach(textInput::add);
+    public static void main(String[] args){
+        ArrayList<String> textInput = HelperClass.readFileLines("input1.txt");
 
         ArrayList<Integer> elfs = first_day(textInput);
 
